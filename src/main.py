@@ -8,11 +8,12 @@ import part2_preprocessing
 import part3_logistic_regression
 
 
-# Call functions / instanciate objects from the .py files
+
 def main():
+    # PART 1: Instanciate etl, saving the two datasets in `./data/`
     print(f"First CSV saved to {part1_etl.felony_data()}")
     print(f"Second CSV saved to {part1_etl.arrest_data()}")
-    # PART 1: Instanciate etl, saving the two datasets in `./data/`
+
 
     # PART 2: Call functions/instanciate objects from preprocessing
     df_arrests = part2_preprocessing.wrapper()
