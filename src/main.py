@@ -4,6 +4,8 @@ You will run this problem set from main.py, so set things up accordingly
 
 import pandas as pd
 import part1_etl
+import part2_preprocessing
+import part3_logistic_regression
 
 
 # Call functions / instanciate objects from the .py files
@@ -13,8 +15,10 @@ def main():
     # PART 1: Instanciate etl, saving the two datasets in `./data/`
 
     # PART 2: Call functions/instanciate objects from preprocessing
+    df_arrests = part2_preprocessing.wrapper()
 
     # PART 3: Call functions/instanciate objects from logistic_regression
+    df_arrests_train, df_arrests_test = part3_logistic_regression.logistic_regression(df_arrests)
 
     # PART 4: Call functions/instanciate objects from decision_tree
 
