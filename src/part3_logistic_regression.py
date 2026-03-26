@@ -52,6 +52,6 @@ def logistic_regression(df_arrests) -> tuple:
     df_arrests_test = df_arrests_test.copy()
     df_arrests_test['pred_lr'] = gs_cv.predict(df_arrests_test[features])
 
-    return df_arrests_train, df_arrests_test
+    return df_arrests_train, df_arrests_test, gs_cv
 
 
