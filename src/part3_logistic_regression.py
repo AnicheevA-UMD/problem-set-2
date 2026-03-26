@@ -46,7 +46,7 @@ def logistic_regression(df_arrests) -> tuple:
     gs_cv = GridSearchCV(lr_model, param_grid, cv=5)
     gs_cv.fit(df_arrests_train[features], df_arrests_train['y'])
     print(f"Optimal value for C: {gs_cv.best_params_['C']}")
-    print(f"C=0.01 has the most regularization, 1 since that is what the model picked. However, it's only working with two features which makes the lowest C win by default.")
+    print(f"C=0.01 has the most regularization, 1 is in the middle and 100 has the least. The system picked 0.01 even though the results were identical for all three. It did so because it's only working with two features which makes the first value in the list win by default.")
 
     # Test set
     df_arrests_test = df_arrests_test.copy()
